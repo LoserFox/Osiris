@@ -279,14 +279,12 @@
     <ClInclude Include="SDK\Input.h" />
     <ClInclude Include="SDK\InputSystem.h" />
     <ClInclude Include="SDK\ItemSchema.h" />
-    <ClInclude Include="SDK\ivmodelrender.hpp" />
     <ClInclude Include="SDK\KeyValues.h" />
     <ClInclude Include="SDK\KeyValuesSystem.h" />
     <ClInclude Include="SDK\Localize.h" />
     <ClInclude Include="SDK\LocalPlayer.h" />
     <ClInclude Include="SDK\Material.h" />
     <ClInclude Include="SDK\MaterialSystem.h" />
-    <ClInclude Include="SDK\math.hpp" />
     <ClInclude Include="SDK\matrix3x4.h" />
     <ClInclude Include="SDK\ModelInfo.h" />
     <ClInclude Include="SDK\ModelRender.h" />
@@ -338,9 +336,6 @@
       <DisableOptimizations>false</DisableOptimizations>
       <EnableDebuggingInformation>false</EnableDebuggingInformation>
     </FxCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cpp.hint" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

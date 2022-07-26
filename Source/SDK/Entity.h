@@ -12,9 +12,7 @@
 #include "WeaponId.h"
 
 #include "../Netvars.h"
-/*
-    https://github.com/spirthack/CSGOSimple/blob/df4bb4ef20aef408b54b8eb2f99fb1637a5d97e8/CSGOSimple/valve_sdk/csgostructs.cpp
-*/
+
 class EconItemView;
 
 class matrix3x4;
@@ -68,7 +66,7 @@ public:
     VIRTUAL_METHOD(void, setDestroyedOnRecreateEntities, 13, (), (this + sizeof(uintptr_t) * 2))
 
     VIRTUAL_METHOD(bool, shouldDraw, WIN32_LINUX(3, 149), (), (this + WIN32_LINUX(sizeof(uintptr_t), 0)))
-    VIRTUAL_METHOD(Model*, getModel, 8, (), (this + sizeof(uintptr_t)))
+    VIRTUAL_METHOD(const Model*, getModel, 8, (), (this + sizeof(uintptr_t)))
     VIRTUAL_METHOD(const matrix3x4&, toWorldTransform, 32, (), (this + sizeof(uintptr_t)))
 
     VIRTUAL_METHOD_V(int&, handle, 2, (), (this))
@@ -90,9 +88,8 @@ public:
     VIRTUAL_METHOD(WeaponInfo*, getWeaponData, WIN32_LINUX(461, 529), (), (this))
     VIRTUAL_METHOD(int, getMuzzleAttachmentIndex1stPerson, WIN32_LINUX(468, 536), (Entity* viewModel), (this, viewModel))
     VIRTUAL_METHOD(int, getMuzzleAttachmentIndex3rdPerson, WIN32_LINUX(469, 537), (), (this))
-    VIRTUAL_METHOD(float, getInaccuracy, WIN32_LINUX(482, 551), (), (this))
-    VIRTUAL_METHOD(float, GetSpread, WIN32_LINUX(452, 521), (), (this))
-    VIRTUAL_METHOD(void, UpdateAccuracyPenalty, WIN32_LINUX(483, 552), (), (this))
+    VIRTUAL_METHOD(float, getInaccuracy, WIN32_LINUX(483, 551), (), (this))
+
 #if IS_WIN32()
     auto getEyePosition() noexcept
     {
